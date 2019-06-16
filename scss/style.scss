@@ -603,4 +603,33 @@ footer {
   height: 400px;
 }
 
+//MOBILE
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 25px;
+  }
+  header {
+        height: 100px;
+    #header-logo {
+          height: 150px;
+          width: 150px;
+    }
+      nav {
+        top: 15px;
+        label b i {
+              width: 30px;
+              height: 4px;
+              top: 20px;
+          &i:nth-child(2) {
+      top: 30px;
+          }
+          &i:nth-child(3) {
+          top: 40px;
+        }
+      }
+    }
+  }
+}
+
 
