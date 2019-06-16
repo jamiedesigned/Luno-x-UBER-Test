@@ -623,12 +623,12 @@ footer {
         label b i {
               width: 30px;
               height: 4px;
-              top: 40px;
+              top: 40px !important;
           &:nth-child(2) {
-            top: 20px;
+            top: 20px !important;
           }
           &:nth-child(3) {
-          top: 30px;
+          top: 30px !important; 
         }
       }
     }
@@ -637,13 +637,13 @@ footer {
       height: 280px !important;
   }
   header nav menu.show {
-    width: 320px;
+    width: 320px !important;
   }
   .white-bar {
         padding-left: 210px !important;
     h4::after {
-      height: 75px;
-      width: 75px;
+      height: 75px !important;
+      width: 75px !important;
     }
   }
 }
