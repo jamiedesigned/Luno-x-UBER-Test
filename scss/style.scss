@@ -1,0 +1,606 @@
+@import 'vars';
+
+/*!
+Project Name: Luno & UBER Test page
+Author: Jamie Ferguson
+Version: 1.0.0
+Description: Test submission for UBER x Luno free customer engagement Bitcoin offer.
+Date: 15th June 2019
+*/
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-size-adjust: 100%;
+  font-family: $font-family;
+    &::-webkit-scrollbar {
+      background-color: $white;
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $white;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $white;
+      border-radius: 16px;
+      border: 2px solid $dark-blue;
+    }
+}
+
+#preloader {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      background-color: #ffffffab;
+  .type-text {
+    color: $light-blue;
+    font-family: $font-family;
+    overflow: hidden;
+    border-right: .15em solid $light-blue;
+    white-space: nowrap;
+    margin: auto;
+    letter-spacing: .15em;
+    animation:
+    typing 2s steps(30, end),
+    blink-caret .5s step-end infinite;
+    font-size: 64px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+ /* TYPE EFFECT */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* CURSOR FOR TYPE EFFECT */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $light-blue }
+}
+
+//HEADER STYLES
+
+header {
+  height: 65px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  #header-logo {
+    height: 90px;
+    width: 90px;
+    margin-left: 75px;
+    background-image: url(images/lunologo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+nav input {
+  display: none;
+}
+
+nav  {
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  z-index: 999;
+  cursor: pointer;
+  menu {
+    list-style: none;
+    text-align: left;
+    display: none;
+    width: 250px;
+    padding: 0;
+    position: fixed;
+    left: -600px;
+    overflow-x: hidden;
+      &.show {
+        display: flex;
+        height: 100%;
+        transition: left 0.4s ease-in-out;
+        left: 0;
+        top: 0;
+        flex-direction: column;
+        box-shadow: 4px 0 16px 0 rgba(0,0,0,.24);
+        background-color: $white;
+        margin: 0;
+        overflow-y: scroll;
+        &::before {
+          content: '';
+          position: absolute;
+          top: -12px;
+          height: 90px;
+          width: 90px;
+          margin-left: 75px;
+          background-image: url(images/lunologo-blue.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          left: 0;
+        }
+         &::after {
+          content: '';
+          position: absolute;
+          margin-left: 30px;
+          background-image: url(images/back-arrow.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          left: 0;
+          top: 22px;
+          height: 25px;
+          width: 20px;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 80px auto 0;
+          p {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #bdbdbd;
+            margin: 0;
+            padding-left: 30px;
+
+          }
+          li {
+            &:first-of-type {
+              margin-bottom: 25px;
+              &:hover {
+                background-color: transparent;
+              }
+            }
+            padding: 5px;
+            width: 240px;
+            margin: auto;
+            padding-left: 30px;
+            &:hover {
+              background-color: #f2f2f2;
+            }
+          }
+          hr {
+            border: 0;
+            background-color: $light-grey;
+            height: 1px;
+          }
+          .download-alt {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 250px;
+            padding: 25px 0;
+            a {
+              img {
+                    border: 1px solid #f2f2f2;
+                    border-radius: 5px;
+                    width: 130px;
+                    height: 50px;
+                    padding: 5px 15px;
+                &:hover {
+                  background-color: #f2f2f2;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+    & label b {
+      width: 40px;
+      height: 40px;
+      display: block;
+      position: relative;
+      left: 0;
+      top: 2px;
+      cursor: pointer;
+
+        & i {
+          display: block;
+          background: $white;
+          width: 25px;
+          height: 2px;
+          position: absolute;
+          left: 8px;
+          top: 8px;
+          border-radius: 3px;
+          transform-origin: 20px 4px;
+        }
+        & i:nth-child(2) {
+          top: 15px;
+        }
+        & i:nth-child(3) {
+          transform-origin: 26px 4px;
+          top: 22px;
+        }
+      }
+      &:hover {
+        b i {
+          background: $light-blue;
+        }
+      }
+    }
+
+  &.scrolled {
+    transition: all .2s ease;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24), 0 0 2px 0 rgba(0,0,0,.12);
+    background-color: $white;
+      #header-logo {
+      background-image: url("images/lunologo-blue.svg");
+      }
+      nav label b i {
+        background: $dark-blue;
+
+      }
+    & nav:hover {
+        b i {
+          background: $light-blue;
+        }
+      }
+  }
+}
+
+main {
+  .above-fold-section {
+    background-image: url("images/berlin-background.png");
+    background-size: cover;
+    padding: 140px 0 110px;
+    display: flex;
+    justify-content: center;
+    .above-fold-content {
+      max-width: 75vw;
+      h1 {
+        font-size: 65px;
+        font-weight: 200;
+        text-shadow: $text-shadow;
+        line-height: 75px;
+        margin: 0 0 20px;
+      }
+      h3 {
+        font-size: 33px;
+        margin: 0;
+        font-weight: 600;
+        text-shadow: $text-shadow;
+      }
+      h4 {
+        font-size: 25px;
+        line-height: 40px;
+        margin: 0;
+        font-weight: 200;
+        text-shadow: $text-shadow;
+      }
+      h5 {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 200;
+        text-shadow: $text-shadow;
+      }
+      .download-buttons {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 320px;
+        img {
+            max-width: 150px;
+            max-height: 150px;
+          &:hover {
+            background-color: #ffffff50;
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  .white-bar {
+    height: 180px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 0 2px 0 rgba(0,0,0,0.12);
+    padding: 0 50px;
+    overflow-x: scroll;
+    position: relative;
+    .white-bar-icon {
+      max-width: 220px;
+      @media screen and (max-width: $small-laptop-breakpoint) {
+            max-width: none;
+            min-width: 300px;
+            margin-left: 100px;
+        &.first-icon {
+            margin-left: 1100px;
+        }
+      }
+      h5 {
+        margin: 0 auto;
+      }
+      h4 {
+        position: relative;
+        margin: 0 auto;
+      &::after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        background-image: url(images/user-investing.svg);
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        transform: translate(-125%, -50%);
+        left: 0;
+        background-repeat: no-repeat;
+        }
+        &.two {
+          &::after {
+              background-image: url(images/GB.png);
+          }
+        }
+        &.three {
+          &::after {
+              background-image: url(images/btc_eth.svg);
+              width: 70px;
+              height: 70px;
+              transform: translate(-125%, -50%);
+          }
+        }
+        &.four {
+          &::after {
+              background-image: url(images/avatar-za-ukwedeh-64.jpg);
+          }
+        }
+      }
+    }
+    @media screen and (max-width: $small-laptop-breakpoint) {
+      &::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url(images/horizontal-scroll.svg);
+        background-size: contain;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        background-repeat: no-repeat;
+        bottom: -15px;
+        opacity: 0.4;
+      }
+    }
+  }
+  .step-by-step {
+    background: url("images/3steps-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h3 {
+          font-size: 50px;
+          font-weight: 300;
+          text-align: center;
+    }
+    .two-columns {
+      display: flex;
+      .column-one {
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        .steps {
+          height: 150px;
+          padding: 0 80px;
+          margin-left: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-radius: 5px;
+          transition: .4s background-color;
+          cursor: pointer;
+          position: relative;
+          img {
+                position: absolute;
+                left: 10px;
+                width: 50px;
+                height: 50px;
+                top: 15px;
+          }
+          h5 {
+            margin: 0;
+            font-size: 25px;
+          }
+          p {
+            margin: 0;
+            padding: 0 45px 0px 0px;
+          }
+          &:hover {
+            background-color: #E0F2FF;
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              background-image: url("images/angle-right.svg");
+              background-size: contain;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              right: 20px;
+              background-repeat: no-repeat;
+              bottom: 25%;
+              opacity: 1;
+            }
+          }
+          &.current {
+            background-color: #E0F2FF;
+            &::after {
+              content: '';
+              transition: all .4s ease;
+              width: 40px;
+              height: 40px;
+              background-image: url("images/angle-right.svg");
+              background-size: contain;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              right: 0;
+              background-repeat: no-repeat;
+              bottom: 25%;
+              opacity: 1;
+            }
+          }
+        }
+      }
+        .column-two {
+            width: calc(50% - 10px);
+            background: url("images/app-shot-1.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            flex-grow: 1;
+        }
+    }
+    @media screen and (max-width: $small-laptop-breakpoint) {
+            h3 {
+              font-size: 40px;
+            }
+            .two-columns {
+                flex-wrap: wrap;
+                .column-one {
+                  width: 100%;
+                  .steps {
+                    margin: 0 0 25px;
+                  }
+              }
+              .column-two {
+                width: 100%;
+                height: 455px;
+                margin-top: 40px;
+              }
+            }
+        }
+  }
+  .why-invest {
+    background-color: $dark-blue;
+    padding: 50px 20px;
+    h2 {
+      color: $white;
+      text-align: center;
+      font-size: 35px;
+      font-weight: 300;
+    }
+    .three-boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        padding: 30px;
+        width: 30%;
+        margin: 25px;
+        h3 {
+          margin: 0;
+        }
+        img {
+          height: 100px;
+          width: 100px;
+        }
+        @media screen and (max-width: $small-laptop-breakpoint) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .why-choose-luno {
+    padding: 70px 0 0;
+    h2 {
+      text-align: center;
+      font-weight: 300;
+      span {
+        font-weight: 700;
+      }
+    }
+    .four-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 20px;
+      text-align: center;
+      .quarter-width {
+        width: 20%;
+        @media screen and (max-width: $small-laptop-breakpoint) {
+          width: 50%;
+        }
+        @media screen and (max-width: 750px) {
+          width: 100%;
+        }
+      }
+      .why-choose-box-1 {
+        padding: 20px;
+      }
+      .why-choose-box-2 {
+        padding: 20px;
+      }
+      .why-choose-box-3 {
+        padding: 20px;
+      }
+      .why-choose-box-4 {
+
+      }
+    }
+    .button-alt {
+      width: 120px
+    }
+  }
+}
+
+.get-started {
+  background-image: url("images/lunocircles-01.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $dark-blue;
+  padding: 60px 20px;
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  .get-started-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      width: 220px;
+      height: 85px;
+      &:hover {
+         background-color: #f2f2f250;
+      }
+    }
+  }
+}
+
+footer {
+  background-image: url("images/footer-screen-shot.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
+

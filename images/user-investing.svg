@@ -1,0 +1,14 @@
+<svg id="user-investing" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="home_social-proof_presence_countries_4_sections">
+    <g id="header">
+      <g id="footer">
+        <g id="_1" data-name="1" transform="translate(0 0)">
+          <g id="ic_community" transform="translate(0 0)">
+            <circle id="Oval-8" cx="32" cy="32" r="32" fill="#0091ff"/>
+            <path id="ic_person" d="M28.36,27.36a7.68,7.68,0,1,0-7.68-7.68,7.7,7.7,0,0,0,7.68,7.68Zm0,3.84C23.176,31.2,13,33.7,13,38.88v3.84H43.72V38.88c0-5.184-10.176-7.68-15.36-7.68Z" transform="translate(3.64 3.36)" fill="#fff" fill-rule="evenodd"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

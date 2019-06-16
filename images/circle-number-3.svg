@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="154" viewBox="0 0 123 154">
+  <g id="circle-number-3" transform="translate(-100 -2240)">
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(100 2240)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="61.5" cy="61.5" r="61.5" stroke="none"/>
+      <circle cx="61.5" cy="61.5" r="61" fill="none"/>
+    </g>
+    <text id="_3" data-name="3" transform="translate(125 2255)" fill="#12326b" font-size="75" font-family="LucidaGrande, Lucida Grande"><tspan x="12.288" y="73">3</tspan></text>
+  </g>
+</svg>
