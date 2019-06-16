@@ -6,6 +6,8 @@ I have not used any styles or markup from the live pages (except a few assets an
 
 I have created an XD file with all the elements from the current live page. I find it helpful to have a page where I can put all my assets and a design to print so that I can work from it and annotate it to think and plan the mark up.
 
+** responsive needs some work to make it better from a UX point of view such as font size, alignment and size of menu etc. However I would be able to amend these with media queries with another hour or so.
+
 - I created a loader effect which simulates written text for the first few milliseconds of the page load. I think it is quite stylish and in keeping with Luno using js.
 
 - I created the menu from the live site with all relevant hover effects.
